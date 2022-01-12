@@ -6,6 +6,17 @@ keymap("n", "<C-j>", "<C-w>j", { silent = true })
 keymap("n", "<C-k>", "<C-w>k", { silent = true })
 keymap("n", "<C-l>", "<C-w>l", { silent = true })
 
+-- Switch from insert to normal
+keymap("i", "jk", "<ESC>", { noremap = true, silent = true })
+
+-- Insert semicolon to final line
+keymap("n", "<Leader>;", "$a;<ESC>", { noremap = true, silent = true })
+
+-- Quick save, quit and save-quit
+keymap("n", "<Leader>w", ":w<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>q", ":q<CR>", { noremap = true, silent = true })
+keymap("n", "<Leader>wq", ":wq<CR>", { noremap = true, silent = true })
+
 -- Move selected line / block of text in visual mode
 keymap("x", "K", ":move '<-2<CR>gv-gv", { noremap = true, silent = true })
 keymap("x", "J", ":move '>+1<CR>gv-gv", { noremap = true, silent = true })
